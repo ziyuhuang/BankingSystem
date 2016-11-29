@@ -10,12 +10,16 @@
 #define InvalidInput_h
 
 namespace InvalidInput {
+    
+    //exception type
     class InputError{
         
     };
 }
 
 namespace NotEnoughBalance {
+    
+    //exception type
     class BalanceError{
         
     };

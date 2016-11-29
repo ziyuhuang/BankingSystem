@@ -2,9 +2,6 @@
 //  Bank.cpp
 //  BankingSystem
 //
-//  Created by ZIYU HUANG on 10/30/16.
-//  Copyright © 2016 ZIYU HUANG. All rights reserved.
-//
 
 #include "Bank.hpp"
 #include "CheckingAccount.h"
@@ -54,7 +51,7 @@ void Bank::addAccount(Account* account){
     SavingAccount* s;
 
     
-    
+    //if the account is a saving account, minimum deposit is required.
     if((s = dynamic_cast<SavingAccount*>(account))){
         try{
             if(s->checkMinBalance()){

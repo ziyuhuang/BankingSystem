@@ -15,6 +15,8 @@ Date::Date(){
     tm* timePtr = localtime(&t);
     
     date = "";
+    
+    //date format (month/day/year ex: 01/01/2016)
     date = to_string(timePtr->tm_mon) + "/" + to_string(timePtr->tm_mday) + "/" + to_string(timePtr->tm_year + 1900);
 }
 

@@ -16,11 +16,13 @@
 using namespace std;
 class CheckingAccount:public Account{
 public:
-//    CheckingAccount();
+    
+    //constructor
     CheckingAccount(int theId, float theBalance, string thePassword, Customer theCustomer)
     :Account(theId, theBalance, thePassword, theCustomer){}
     
-//    ~CheckingAccount();
+    //withdraw from the account
+    //transaction:transaction to perform
     bool withdraw(WithdrawTransaction transaction);
 private:
     

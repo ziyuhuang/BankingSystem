@@ -39,6 +39,8 @@ public:
     //set the current interest rate
     void setInterrestRate(float& rate){interestRate = rate;}
     
+    //withdraw from the account
+    //transaction:transaction to perform
     bool withdraw(WithdrawTransaction transaction);
 private:
     float minBalance;
