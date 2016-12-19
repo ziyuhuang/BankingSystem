@@ -48,6 +48,9 @@ void Bank::addAccount(Account* account){
         }
     }
     
+    Customer temp = account->getCustomer();
+    customer_list.insert(temp);
+    
     SavingAccount* s;
 
     
@@ -67,7 +70,17 @@ void Bank::addAccount(Account* account){
         //add account to the bank
         account_list.push_back(account);
     }
-    
     size++;
+}
+
+void Bank::printCustomerList(){
+    set<Customer, Comp>::iterator iter;
+    cout << "*******************************************************" << endl;
+    cout << "** Bank Customer List                                       *" << endl;
+    cout << "*******************************************************" << endl;
+
+    for(iter = customer_list.begin(); iter != customer_list.end(); iter++){
+        cout << (*iter).getName() << endl;
+    }
 }
 

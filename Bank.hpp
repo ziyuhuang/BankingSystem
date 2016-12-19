@@ -17,8 +17,15 @@
 #include <vector>
 #include "CheckingAccount.h"
 #include "SavingAccount.h"
+#include <set>
 
 using namespace std;
+
+struct Comp{
+    bool operator()(const Customer &c1, const Customer &c2){
+        return c1.getName() < c2.getName();
+    }
+};
 
 class Bank{
 public:
@@ -49,9 +56,13 @@ public:
     //return a list than contains all the accounts of the bank
     vector<Account*> getAccountList(){return account_list;}
     
+    //print all the bank customers
+    void printCustomerList();
+    
 private:
     string name; //name of the bank
     vector<Account*> account_list; //list to hold the accounts
     int size; //total account numbers of the bank
+    set<Customer, Comp> customer_list;
 };
 #endif /* Bank_hpp */

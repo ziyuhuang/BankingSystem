@@ -25,6 +25,8 @@ bool Account::deposit(DepositTransaction transaction){
 }
 
 void Account::showAccountActivities(){
+    Customer c = getCustomer();
+    cout << "*********" << c.getName() << " Accout Info**********" << endl;
     list<Transaction>::const_iterator iter;
     for(iter = tranSacRecords.begin(); iter != tranSacRecords.end(); iter++){
         cout << iter->getStatement();

@@ -24,7 +24,10 @@ public:
     //thePassword: passowrd of the account
     //theCustomer: customer of the account
     Account(int theId, float theBalance, string thePassword, Customer theCustomer)
-        :account_id(theId), balance(theBalance), password(thePassword), customer(theCustomer){}
+        :account_id(theId), balance(theBalance), password(thePassword), customer(theCustomer){
+            DepositTransaction d(theBalance);
+            tranSacRecords.push_back(d);
+        }
     
     //return the id of the account
     int getAccountNumber() const {return account_id;};
@@ -52,6 +55,11 @@ public:
     
     //accessor function for CheckingAccount & SavingAccount class
     void addWithdrawTransaction(WithdrawTransaction transaction) {tranSacRecords.push_back(transaction);}
+    
+    //get customer
+    Customer getCustomer() const{
+        return customer;
+    }
     
 private:
     int account_id;

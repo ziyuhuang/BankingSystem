@@ -24,7 +24,7 @@ public:
     Customer(string theId):customer_id(theId){}
     
     //constructor
-    Customer(string theId, string theName, string theAddress, int thePhoneNumber){
+    Customer(string theId, string theName, string theAddress, string thePhoneNumber){
         customer_id = theId, name = theName, address = theAddress; phoneNumber = thePhoneNumber;
     }
     
@@ -32,17 +32,18 @@ public:
     string getCustomerID() const {return customer_id;}
     string getName() const {return name;}
     string getAddress() const {return address;}
-    int getPhoneNumber() const {return phoneNumber;}
+    string getPhoneNumber() const {return phoneNumber;}
     
     //setter
     void setName(string& theName){name = theName;}
     void setAddress(string& theAddress){address = theAddress;}
     void setPhone(int& thePhoneNumber){phoneNumber = thePhoneNumber;}
     
+    
 private:
     string customer_id;
     string name;
     string address;
-    int phoneNumber;
+    string phoneNumber;
 };
 #endif /* Customer_h */
