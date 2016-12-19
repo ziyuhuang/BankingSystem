@@ -12,6 +12,14 @@ Bank::Bank(){
     size = 0;
 }
 
+Bank::Bank(string theName):name(theName){size = 0;}
+
+string Bank::getBankName() const {return name;}
+
+int Bank:: getSize() const {return size;}
+
+vector<Account*> Bank:: getAccountList(){return account_list;}
+
 Account* Bank:: getAccountInfo(int accountId){
     Account* temp = nullptr;
     for(int i = 0; i < account_list.size(); i++){

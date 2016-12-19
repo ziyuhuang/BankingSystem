@@ -18,8 +18,7 @@ class CheckingAccount:public Account{
 public:
     
     //constructor
-    CheckingAccount(int theId, float theBalance, string thePassword, Customer theCustomer)
-    :Account(theId, theBalance, thePassword, theCustomer){}
+    CheckingAccount(int theId, float theBalance, string thePassword, Customer theCustomer);
     
     //withdraw from the account
     //transaction:transaction to perform

@@ -35,10 +35,10 @@ public:
     
     //constructor
     //param: name of the bank, initial size equals zero
-    Bank(string theName):name(theName){size = 0;}
+    Bank(string theName);
     
     //getter, return the name of the bank
-    string getBankName() const {return name;}
+    string getBankName() const;
     
     //return a pointer points to the account has the accountId
     Account* getAccountInfo(int accountId);
@@ -51,10 +51,10 @@ public:
     void addAccount(Account*);
     
     //return the total account size of the bank
-    int getSize() const {return size;}
+    int getSize() const;
     
     //return a list than contains all the accounts of the bank
-    vector<Account*> getAccountList(){return account_list;}
+    vector<Account*> getAccountList();
     
     //print all the bank customers
     void printCustomerList();

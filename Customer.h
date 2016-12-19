@@ -19,25 +19,23 @@ public:
     //default construtor
     Customer();
     
-    //constructor
-    //theId: id of the customer
-    Customer(string theId):customer_id(theId){}
+//    constructor
+//    theId: id of the customer
+    Customer(string theId);
     
-    //constructor
-    Customer(string theId, string theName, string theAddress, string thePhoneNumber){
-        customer_id = theId, name = theName, address = theAddress; phoneNumber = thePhoneNumber;
-    }
-    
+//    constructor
+    Customer(string theId, string theName, string theAddress, string thePhoneNumber);
+
     //getter
-    string getCustomerID() const {return customer_id;}
-    string getName() const {return name;}
-    string getAddress() const {return address;}
-    string getPhoneNumber() const {return phoneNumber;}
+    string getCustomerID();
+    string getName() const;
+    string getAddress() const;
+    string getPhoneNumber() const;
     
     //setter
-    void setName(string& theName){name = theName;}
-    void setAddress(string& theAddress){address = theAddress;}
-    void setPhone(int& thePhoneNumber){phoneNumber = thePhoneNumber;}
+    void setName(string& theName);
+    void setAddress(string& theAddress);
+    void setPhone(int& thePhoneNumber);
     
     
 private:

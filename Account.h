@@ -23,11 +23,7 @@ public:
     //theBalance: initial balance
     //thePassword: passowrd of the account
     //theCustomer: customer of the account
-    Account(int theId, float theBalance, string thePassword, Customer theCustomer)
-        :account_id(theId), balance(theBalance), password(thePassword), customer(theCustomer){
-            DepositTransaction d(theBalance);
-            tranSacRecords.push_back(d);
-        }
+    Account(int theId, float theBalance, string thePassword, Customer theCustomer);
     
     //return the id of the account
     int getAccountNumber() const {return account_id;};

@@ -11,6 +11,12 @@
 using namespace InvalidInput;
 using namespace NotEnoughBalance;
 
+Account:: Account(int theId, float theBalance, string thePassword, Customer theCustomer)
+:account_id(theId), balance(theBalance), password(thePassword), customer(theCustomer){
+    DepositTransaction d(theBalance);
+    tranSacRecords.push_back(d);
+}
+
 bool Account::deposit(DepositTransaction transaction){
     try{
         if(transaction.getAmount() < 0) throw "Please enter a positive number for deposit.";

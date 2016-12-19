@@ -11,6 +11,9 @@
 using namespace InvalidInput;
 using namespace NotEnoughBalance;
 
+CheckingAccount::CheckingAccount(int theId, float theBalance, string thePassword, Customer theCustomer)
+:Account(theId, theBalance, thePassword, theCustomer){}
+
 bool CheckingAccount::withdraw(WithdrawTransaction transaction){
     try{
         if(transaction.getAmount() < 0) throw InputError();
